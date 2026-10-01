@@ -395,10 +395,6 @@ const nl: Translations = {
   footer: { rights: "Alle rechten voorbehouden.", quick: "Snelle links" },
 };
 
-// de/en share footer with default; ensure they exist
-de.footer = { rights: "Alle Rechte vorbehalten.", quick: "Schnellzugriff" };
-en.footer = { rights: "All rights reserved.", quick: "Quick links" };
-
 const translations: Record<Lang, Translations> = { de, en, tr, fr, nl };
 
 const LangContext = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: Translations }>({
