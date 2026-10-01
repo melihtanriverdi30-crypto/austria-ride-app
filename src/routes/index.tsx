@@ -85,7 +85,7 @@ function HomePage() {
               key={s.title}
               className="group rounded-2xl border border-border bg-card p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
             >
-              <span className="text-3xl">{s.icon}</span>
+              <span className="text-primary">{s.icon}</span>
               <h3 className="mt-4 font-heading text-xl font-bold">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>
