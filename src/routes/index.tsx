@@ -29,9 +29,9 @@ function HomePage() {
   const { t } = useLanguage();
 
   const serviceCards = [
-    { ...t.services.airport, icon: "✈️" },
-    { ...t.services.city, icon: "🚖" },
-    { ...t.services.vip, icon: "⭐" },
+    { ...t.services.airport, icon: <IconPlane /> },
+    { ...t.services.city, icon: <IconTaxi /> },
+    { ...t.services.vip, icon: <IconStar /> },
   ];
 
   return (
