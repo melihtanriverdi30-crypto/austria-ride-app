@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/i18n";
 import { BookingForm } from "@/components/BookingForm";
+import { IconPlane, IconTaxi, IconStar } from "@/components/icons";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -26,9 +27,9 @@ export const Route = createFileRoute("/services")({
 function ServicesPage() {
   const { t } = useLanguage();
   const cards = [
-    { ...t.services.airport, icon: "✈️" },
-    { ...t.services.city, icon: "🚖" },
-    { ...t.services.vip, icon: "⭐" },
+    { ...t.services.airport, icon: <IconPlane /> },
+    { ...t.services.city, icon: <IconTaxi /> },
+    { ...t.services.vip, icon: <IconStar /> },
   ];
 
   return (
@@ -39,7 +40,7 @@ function ServicesPage() {
       <div className="mt-12 grid gap-6 md:grid-cols-3">
         {cards.map((s) => (
           <div key={s.title} className="rounded-2xl border border-border bg-card p-8 shadow-sm">
-            <span className="text-4xl">{s.icon}</span>
+            <span className="text-primary">{s.icon}</span>
             <h2 className="mt-5 font-heading text-2xl font-bold">{s.title}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{s.desc}</p>
           </div>

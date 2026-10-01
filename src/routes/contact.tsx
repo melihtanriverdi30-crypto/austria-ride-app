@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/i18n";
 import { COMPANY } from "@/lib/config";
 import { BookingForm } from "@/components/BookingForm";
+import { IconPhone, IconChat, IconMail, IconClock } from "@/components/icons";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -35,7 +36,7 @@ function ContactPage() {
             href={`tel:${COMPANY.phoneHref}`}
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-xl text-primary">📞</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><IconPhone /></span>
             <span>
               <span className="block text-xs text-muted-foreground">{t.contact.phone}</span>
               <span className="font-heading text-lg font-bold">{COMPANY.phone}</span>
@@ -47,7 +48,7 @@ function ContactPage() {
             rel="noopener noreferrer"
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/15 text-xl">💬</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1da851]"><IconChat /></span>
             <span>
               <span className="block text-xs text-muted-foreground">WhatsApp</span>
               <span className="font-heading text-lg font-bold">{COMPANY.phone}</span>
@@ -57,14 +58,14 @@ function ContactPage() {
             href={`mailto:${COMPANY.email}`}
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
           >
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-xl text-primary">✉️</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><IconMail /></span>
             <span>
               <span className="block text-xs text-muted-foreground">{t.contact.email}</span>
               <span className="font-heading text-lg font-bold">{COMPANY.email}</span>
             </span>
           </a>
           <div className="flex items-center gap-4 rounded-2xl border border-border bg-card p-6">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-xl text-primary">🕐</span>
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><IconClock /></span>
             <span>
               <span className="block text-xs text-muted-foreground">{t.contact.hours}</span>
               <span className="font-heading text-lg font-bold">{t.contact.hoursValue}</span>

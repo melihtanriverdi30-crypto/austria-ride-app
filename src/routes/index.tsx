@@ -105,8 +105,8 @@ function HomePage() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {t.why.items.map((item) => (
               <div key={item.title} className="rounded-2xl border border-border bg-card p-6">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 font-heading text-lg font-bold text-primary">
-                  ✓
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <IconCheck />
                 </span>
                 <h3 className="mt-4 font-heading text-base font-bold">{item.title}</h3>
                 <p className="mt-1.5 text-sm text-muted-foreground">{item.desc}</p>
@@ -127,7 +127,7 @@ function HomePage() {
                 href={`tel:${COMPANY.phoneHref}`}
                 className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary">📞</span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary/10 text-primary"><IconPhone /></span>
                 <span>
                   <span className="block text-xs text-muted-foreground">{t.contact.phone}</span>
                   <span className="font-heading text-lg font-bold">{COMPANY.phone}</span>
@@ -139,7 +139,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1da851]">💬</span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1da851]"><IconChat /></span>
                 <span>
                   <span className="block text-xs text-muted-foreground">WhatsApp</span>
                   <span className="font-heading text-lg font-bold">{COMPANY.phone}</span>
