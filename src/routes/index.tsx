@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/i18n";
 import { COMPANY } from "@/lib/config";
 import { BookingForm } from "@/components/BookingForm";
+import { IconPlane, IconTaxi, IconStar, IconPhone, IconChat, IconCheck } from "@/components/icons";
 import heroImg from "@/assets/hero-vienna.jpg";
 
 export const Route = createFileRoute("/")({
