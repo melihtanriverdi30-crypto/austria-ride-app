@@ -164,6 +164,7 @@ const en: Translations = {
     invalidEmail: "Invalid email",
     msgIntro: "New booking request",
   },
+  footer: { rights: "All rights reserved.", quick: "Quick links" },
 };
 
 const tr: Translations = {
