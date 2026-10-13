@@ -6,7 +6,7 @@ import { LANGUAGES, useLanguage, type Lang } from "@/lib/i18n";
 const NAV = [
   { to: "/", key: "home" },
   { to: "/services", key: "services" },
-  { to: "/pricing", key: "pricing" },
+  { to: "/fleet", key: "fleet" },
   { to: "/about", key: "about" },
   { to: "/contact", key: "contact" },
 ] as const;
