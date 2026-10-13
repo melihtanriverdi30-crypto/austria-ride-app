@@ -11,7 +11,7 @@ export const LANGUAGES = [
 export type Lang = (typeof LANGUAGES)[number]["code"];
 
 const de = {
-  nav: { home: "Start", services: "Leistungen", pricing: "Preise", about: "Über uns", contact: "Kontakt" },
+  nav: { home: "Start", services: "Leistungen", fleet: "Flotte", about: "Über uns", contact: "Kontakt" },
   cta: { book: "Jetzt buchen", whatsapp: "WhatsApp", call: "Anrufen" },
   hero: {
     badge: "Lizenziert & versichert · 24/7 in Wien",
@@ -34,19 +34,18 @@ const de = {
       { title: "Mehrsprachig", desc: "Wir sprechen Deutsch, Englisch, Türkisch und mehr." },
     ],
   },
-  pricing: {
-    title: "Preise & beliebte Strecken",
-    subtitle: "Faire Festpreise für die beliebtesten Fahrten. Alle Preise inkl. MwSt. — Beispielpreise, Endpreise auf Anfrage.",
-    from: "ab",
-    rows: [
-      { route: "Flughafen Wien ↔ Innenstadt", price: "€ 39" },
-      { route: "Flughafen Wien ↔ Hauptbahnhof", price: "€ 36" },
-      { route: "Innenstadt ↔ Schönbrunn", price: "€ 19" },
-      { route: "Wien ↔ Bratislava", price: "€ 79" },
-      { route: "Stundensatz Business-Van", price: "€ 55" },
+  fleet: {
+    title: "Unsere Flotte",
+    subtitle: "Moderne, klimatisierte und voll versicherte Fahrzeuge für jeden Anlass — von der Einzelfahrt bis zur Gruppe.",
+    seats: "Personen",
+    vehicles: [
+      { name: "Standard-Limousine", capacity: "Bis zu 4 Personen", desc: "Komfortable Limousine für Stadt- und Flughafenfahrten. Klimaanlage, WLAN und viel Kofferraum." },
+      { name: "Business-Van", capacity: "Bis zu 6 Personen", desc: "Premium-Van für Geschäftsreisende und kleine Gruppen. Ledersitze, diskreter Chauffeur, erstklassiger Komfort." },
+      { name: "Gruppenfahrzeug", capacity: "Bis zu 8 Personen", desc: "Geräumiger Minibus für Familien, Gruppen und viel Gepäck — ideal für Ausflüge und Flughafentransfers." },
     ],
-    note: "Individuelle Strecke? Schreiben Sie uns — wir machen Ihnen sofort ein Angebot.",
+    note: "Kindersitze und besondere Wünsche? Schreiben Sie uns einfach per WhatsApp — wir richten alles für Sie.",
   },
+  float: { message: "Hallo! Ich interessiere mich für eine Fahrt." },
   about: {
     title: "Über uns",
     text: "Wir sind ein junges, lizenziertes Taxi- und Transferunternehmen aus Wien. Unser Ziel: der verlässlichste Fahrservice der Stadt — mit gepflegten Fahrzeugen, freundlichen Fahrern und ehrlichen Preisen. Ob Tourist, Geschäftsreisender oder Wiener:in — bei uns sitzen Sie gut.",
@@ -92,7 +91,7 @@ const de = {
 export type Translations = typeof de;
 
 const en: Translations = {
-  nav: { home: "Home", services: "Services", pricing: "Prices", about: "About us", contact: "Contact" },
+  nav: { home: "Home", services: "Services", fleet: "Fleet", about: "About us", contact: "Contact" },
   cta: { book: "Book now", whatsapp: "WhatsApp", call: "Call us" },
   hero: {
     badge: "Licensed & insured · 24/7 in Vienna",
@@ -115,19 +114,18 @@ const en: Translations = {
       { title: "Multilingual", desc: "We speak German, English, Turkish and more." },
     ],
   },
-  pricing: {
-    title: "Prices & popular routes",
-    subtitle: "Fair fixed prices for the most popular rides. All prices incl. VAT — sample prices, final quote on request.",
-    from: "from",
-    rows: [
-      { route: "Vienna Airport ↔ City centre", price: "€ 39" },
-      { route: "Vienna Airport ↔ Main station", price: "€ 36" },
-      { route: "City centre ↔ Schönbrunn", price: "€ 19" },
-      { route: "Vienna ↔ Bratislava", price: "€ 79" },
-      { route: "Hourly rate business van", price: "€ 55" },
+  fleet: {
+    title: "Our fleet",
+    subtitle: "Modern, air-conditioned and fully insured vehicles for every occasion — from solo rides to groups.",
+    seats: "passengers",
+    vehicles: [
+      { name: "Standard sedan", capacity: "Up to 4 passengers", desc: "Comfortable sedan for city and airport rides. Air conditioning, Wi-Fi and plenty of luggage space." },
+      { name: "Business van", capacity: "Up to 6 passengers", desc: "Premium van for business travellers and small groups. Leather seats, discreet chauffeur, first-class comfort." },
+      { name: "Group vehicle", capacity: "Up to 8 passengers", desc: "Spacious minibus for families, groups and lots of luggage — ideal for trips and airport transfers." },
     ],
-    note: "Custom route? Message us — we'll send you an offer right away.",
+    note: "Child seats or special requests? Just message us on WhatsApp — we'll arrange everything for you.",
   },
+  float: { message: "Hello! I'm interested in a ride." },
   about: {
     title: "About us",
     text: "We are a young, licensed taxi and transfer company from Vienna. Our goal: the most reliable ride service in the city — with well-kept vehicles, friendly drivers and honest prices. Tourist, business traveller or local — you're in good hands with us.",
@@ -168,7 +166,7 @@ const en: Translations = {
 };
 
 const tr: Translations = {
-  nav: { home: "Ana sayfa", services: "Hizmetler", pricing: "Fiyatlar", about: "Hakkımızda", contact: "İletişim" },
+  nav: { home: "Ana sayfa", services: "Hizmetler", fleet: "Filomuz", about: "Hakkımızda", contact: "İletişim" },
   cta: { book: "Hemen rezervasyon", whatsapp: "WhatsApp", call: "Ara" },
   hero: {
     badge: "Lisanslı ve sigortalı · Viyana'da 7/24",
@@ -191,19 +189,18 @@ const tr: Translations = {
       { title: "Çok dilli", desc: "Almanca, İngilizce, Türkçe ve daha fazlası." },
     ],
   },
-  pricing: {
-    title: "Fiyatlar ve popüler güzergahlar",
-    subtitle: "En popüler yolculuklar için adil sabit fiyatlar. KDV dahil — örnek fiyatlardır, kesin fiyat talep üzerine.",
-    from: "başlayan",
-    rows: [
-      { route: "Viyana Havalimanı ↔ Şehir merkezi", price: "€ 39" },
-      { route: "Viyana Havalimanı ↔ Ana tren garı", price: "€ 36" },
-      { route: "Şehir merkezi ↔ Schönbrunn", price: "€ 19" },
-      { route: "Viyana ↔ Bratislava", price: "€ 79" },
-      { route: "Business van saatlik ücret", price: "€ 55" },
+  fleet: {
+    title: "Filomuz",
+    subtitle: "Her ihtiyaca uygun modern, klimalı ve tam sigortalı araçlar — tek kişiden gruplara kadar.",
+    seats: "yolcu",
+    vehicles: [
+      { name: "Standart sedan", capacity: "4 yolcuya kadar", desc: "Şehir içi ve havaalanı yolculukları için konforlu sedan. Klima, Wi-Fi ve geniş bagaj alanı." },
+      { name: "Business van", capacity: "6 yolcuya kadar", desc: "İş seyahatleri ve küçük gruplar için premium van. Deri koltuklar, profesyonel şoför, birinci sınıf konfor." },
+      { name: "Grup aracı", capacity: "8 yolcuya kadar", desc: "Aileler, gruplar ve bol bagaj için geniş minibüs — geziler ve havaalanı transferleri için ideal." },
     ],
-    note: "Farklı bir güzergah mı? Bize yazın — hemen teklif gönderelim.",
+    note: "Çocuk koltuğu veya özel istekleriniz mi var? WhatsApp'tan yazın — her şeyi sizin için ayarlayalım.",
   },
+  float: { message: "Merhaba! Bir yolculuk hakkında bilgi almak istiyorum." },
   about: {
     title: "Hakkımızda",
     text: "Viyana'dan genç, lisanslı bir taksi ve transfer şirketiyiz. Hedefimiz: bakımlı araçlar, güler yüzlü sürücüler ve dürüst fiyatlarla şehrin en güvenilir ulaşım hizmeti olmak. Turist, iş insanı veya Viyanalı — bizimle güvendesiniz.",
@@ -244,7 +241,7 @@ const tr: Translations = {
 };
 
 const fr: Translations = {
-  nav: { home: "Accueil", services: "Services", pricing: "Tarifs", about: "À propos", contact: "Contact" },
+  nav: { home: "Accueil", services: "Services", fleet: "Flotte", about: "À propos", contact: "Contact" },
   cta: { book: "Réserver", whatsapp: "WhatsApp", call: "Appeler" },
   hero: {
     badge: "Licencié & assuré · 24/7 à Vienne",
@@ -267,19 +264,18 @@ const fr: Translations = {
       { title: "Multilingue", desc: "Nous parlons allemand, anglais, turc et plus." },
     ],
   },
-  pricing: {
-    title: "Tarifs & trajets populaires",
-    subtitle: "Prix fixes équitables pour les trajets les plus demandés. TVA incluse — prix indicatifs, devis sur demande.",
-    from: "dès",
-    rows: [
-      { route: "Aéroport de Vienne ↔ Centre-ville", price: "€ 39" },
-      { route: "Aéroport de Vienne ↔ Gare centrale", price: "€ 36" },
-      { route: "Centre-ville ↔ Schönbrunn", price: "€ 19" },
-      { route: "Vienne ↔ Bratislava", price: "€ 79" },
-      { route: "Tarif horaire van business", price: "€ 55" },
+  fleet: {
+    title: "Notre flotte",
+    subtitle: "Des véhicules modernes, climatisés et entièrement assurés pour chaque occasion — du trajet solo au groupe.",
+    seats: "passagers",
+    vehicles: [
+      { name: "Berline standard", capacity: "Jusqu'à 4 passagers", desc: "Berline confortable pour les trajets en ville et vers l'aéroport. Climatisation, Wi-Fi et grand coffre." },
+      { name: "Van business", capacity: "Jusqu'à 6 passagers", desc: "Van premium pour voyageurs d'affaires et petits groupes. Sièges en cuir, chauffeur discret, confort haut de gamme." },
+      { name: "Véhicule de groupe", capacity: "Jusqu'à 8 passagers", desc: "Minibus spacieux pour familles, groupes et bagages nombreux — idéal pour les excursions et transferts aéroport." },
     ],
-    note: "Un trajet sur mesure ? Écrivez-nous — nous vous envoyons une offre immédiatement.",
+    note: "Sièges enfant ou demandes spéciales ? Écrivez-nous sur WhatsApp — nous organisons tout pour vous.",
   },
+  float: { message: "Bonjour ! Je suis intéressé(e) par une course." },
   about: {
     title: "À propos",
     text: "Nous sommes une jeune entreprise de taxi et de transfert licenciée à Vienne. Notre objectif : le service le plus fiable de la ville — véhicules soignés, chauffeurs aimables et prix honnêtes. Touriste, voyageur d'affaires ou Viennois — vous êtes entre bonnes mains.",
@@ -320,7 +316,7 @@ const fr: Translations = {
 };
 
 const nl: Translations = {
-  nav: { home: "Home", services: "Diensten", pricing: "Prijzen", about: "Over ons", contact: "Contact" },
+  nav: { home: "Home", services: "Diensten", fleet: "Wagenpark", about: "Over ons", contact: "Contact" },
   cta: { book: "Nu boeken", whatsapp: "WhatsApp", call: "Bellen" },
   hero: {
     badge: "Gelicentieerd & verzekerd · 24/7 in Wenen",
@@ -343,19 +339,18 @@ const nl: Translations = {
       { title: "Meertalig", desc: "Wij spreken Duits, Engels, Turks en meer." },
     ],
   },
-  pricing: {
-    title: "Prijzen & populaire ritten",
-    subtitle: "Eerlijke vaste prijzen voor de populairste ritten. Alle prijzen incl. btw — indicatieve prijzen, definitieve offerte op aanvraag.",
-    from: "vanaf",
-    rows: [
-      { route: "Luchthaven Wenen ↔ Centrum", price: "€ 39" },
-      { route: "Luchthaven Wenen ↔ Hauptbahnhof", price: "€ 36" },
-      { route: "Centrum ↔ Schönbrunn", price: "€ 19" },
-      { route: "Wenen ↔ Bratislava", price: "€ 79" },
-      { route: "Uurtarief business van", price: "€ 55" },
+  fleet: {
+    title: "Ons wagenpark",
+    subtitle: "Moderne, geairconditioneerde en volledig verzekerde voertuigen voor elke gelegenheid — van soloritten tot groepen.",
+    seats: "passagiers",
+    vehicles: [
+      { name: "Standaard sedan", capacity: "Tot 4 passagiers", desc: "Comfortabele sedan voor ritten in de stad en naar de luchthaven. Airco, wifi en veel bagageruimte." },
+      { name: "Business van", capacity: "Tot 6 passagiers", desc: "Premium van voor zakenreizigers en kleine groepen. Leren stoelen, discrete chauffeur, eersteklas comfort." },
+      { name: "Groepsvoertuig", capacity: "Tot 8 passagiers", desc: "Ruime minibus voor gezinnen, groepen en veel bagage — ideaal voor uitjes en luchthaventransfers." },
     ],
-    note: "Een andere route? Stuur ons een bericht — wij sturen direct een aanbod.",
+    note: "Kinderzitjes of speciale wensen? Stuur ons een bericht via WhatsApp — wij regelen alles voor u.",
   },
+  float: { message: "Hallo! Ik ben geïnteresseerd in een rit." },
   about: {
     title: "Over ons",
     text: "Wij zijn een jong, gelicentieerd taxi- en transferbedrijf uit Wenen. Ons doel: de betrouwbaarste ritservice van de stad — met verzorgde voertuigen, vriendelijke chauffeurs en eerlijke prijzen. Toerist, zakenreiziger of Weener — bij ons zit u goed.",
