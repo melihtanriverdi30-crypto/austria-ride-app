@@ -1,3 +1,4 @@
+import { Button } from "./ui/button";
 import { useState } from "react";
 import { z } from "zod";
 import { COMPANY } from "@/lib/config";
@@ -176,18 +177,18 @@ export function BookingForm() {
       </div>
 
       <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-        <button
+        <Button
           onClick={submitWhatsapp}
-          className="flex-1 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          className="h-auto whitespace-normal flex-1 rounded-full bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground transition-opacity hover:opacity-90"
         >
           {t.form.submitWhatsapp}
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={submitEmail}
-          className="flex-1 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          className="h-auto whitespace-normal flex-1 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
         >
           {t.form.submitEmail}
-        </button>
+        </Button>
       </div>
 
       {sent && <p className="mt-3 text-sm font-medium text-primary">{t.form.success}</p>}

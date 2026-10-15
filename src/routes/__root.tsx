@@ -15,6 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { LanguageProvider } from "../lib/i18n";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { PricingProvider } from "../components/PricingDialog";
 import { WhatsAppFloat } from "../components/WhatsAppFloat";
 
 function NotFoundComponent() {
@@ -82,17 +83,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vienna Transfer — Taxi & Airport Transfer in Wien" },
+      { title: "Alpina Taxi — Taxi & Airport Transfer in Zell am See & Kaprun" },
       {
         name: "description",
         content:
-          "Lizenzierter Taxi- und Flughafentransfer-Service in Wien. Festpreise, 24/7 erreichbar, mehrsprachig. Jetzt per WhatsApp oder E-Mail buchen.",
+          "Alpina Taxi in Zell am See & Kaprun. Transfers zu den Flughäfen Salzburg, Innsbruck und Wien, lokale Fahrten und private Ausflüge — 24/7.",
       },
-      { property: "og:title", content: "Vienna Transfer — Taxi & Airport Transfer in Wien" },
+      { property: "og:title", content: "Alpina Taxi — Taxi & Airport Transfer in Zell am See & Kaprun" },
       {
         property: "og:description",
         content:
-          "Lizenzierter Taxi- und Flughafentransfer-Service in Wien. Festpreise, 24/7 erreichbar, mehrsprachig.",
+          "Lizenzierter Taxi- und Flughafentransfer-Service in Zell am See & Kaprun. Festpreise, 24/7 erreichbar, mehrsprachig.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -104,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap",
       },
     ],
   }),
@@ -134,6 +135,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
+        <PricingProvider>
         <div className="flex min-h-screen flex-col">
           <Header />
           <main className="flex-1">
@@ -142,6 +144,7 @@ function RootComponent() {
           <Footer />
           <WhatsAppFloat />
         </div>
+              </PricingProvider>
       </LanguageProvider>
     </QueryClientProvider>
   );

@@ -6,16 +6,16 @@ import { IconPlane, IconTaxi, IconStar } from "@/components/icons";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Leistungen — Vienna Transfer" },
+      { title: "Leistungen — Alpina Taxi" },
       {
         name: "description",
         content:
-          "Flughafen-Transfer, Stadt-Taxi und Business/VIP-Chauffeurservice in Wien. Festpreise, 24/7, lizenziert & versichert.",
+          "Flughafen-Transfer, Stadt-Taxi und Business/VIP-Chauffeurservice in Zell am See & Kaprun. Festpreise, 24/7, lizenziert & versichert.",
       },
-      { property: "og:title", content: "Leistungen — Vienna Transfer" },
+      { property: "og:title", content: "Leistungen — Alpina Taxi" },
       {
         property: "og:description",
-        content: "Flughafen-Transfer, Stadt-Taxi und Business/VIP-Service in Wien.",
+        content: "Flughafen-Transfer, Stadt-Taxi und Business/VIP-Service in Zell am See & Kaprun.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

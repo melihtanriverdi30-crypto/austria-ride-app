@@ -8,13 +8,13 @@ import groupImg from "@/assets/fleet-group.jpg";
 export const Route = createFileRoute("/fleet")({
   head: () => ({
     meta: [
-      { title: "Unsere Flotte — Vienna Transfer" },
+      { title: "Unsere Flotte — Alpina Taxi" },
       {
         name: "description",
         content:
           "Unsere Fahrzeuge: Standard-Limousine, Business-Van und Gruppenfahrzeug bis 8 Personen — klimatisiert, gepflegt und voll versichert.",
       },
-      { property: "og:title", content: "Unsere Flotte — Vienna Transfer" },
+      { property: "og:title", content: "Unsere Flotte — Alpina Taxi" },
       { property: "og:description", content: "Moderne Fahrzeuge für jeden Anlass — vom Stadt-Taxi bis zum Gruppentransfer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
