@@ -1,10 +1,12 @@
-// Company details — PLACEHOLDER values until the client provides real ones.
 export const COMPANY = {
-  name: "Vienna Transfer",
+  name: "Alpina Taxi",
   tagline: "Taxi & Airport Transfer",
-  phone: "+43 1 234 56 78",
-  phoneHref: "+4312345678",
-  whatsapp: "436641234567", // digits only, used in wa.me links
-  email: "booking@viennatransfer.at",
-  city: "Vienna, Austria",
+  phone: "+43 660 5252515",
+  phoneHref: "+436605252515",
+  whatsapp: "436605252515",
+  email: "alpinataxi2022@gmail.com",
+  city: "Zell am See & Kaprun, Austria",
+  owner: "İbrahim Öztürk",
+  address: "5700 Zell am See Bruckerbundesstrasse 35",
+  vatNumber: "ATU67592027",
 };
