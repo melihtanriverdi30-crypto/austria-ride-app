@@ -6,32 +6,46 @@ export const LANGUAGES = [
   { code: "tr", label: "TR", name: "Türkçe" },
   { code: "fr", label: "FR", name: "Français" },
   { code: "nl", label: "NL", name: "Nederlands" },
+  { code: "ar", label: "AR", name: "العربية" },
 ] as const;
 
 export type Lang = (typeof LANGUAGES)[number]["code"];
 
 const de = {
   nav: { home: "Start", services: "Leistungen", fleet: "Flotte", about: "Über uns", contact: "Kontakt" },
-  cta: { book: "Jetzt buchen", whatsapp: "WhatsApp", call: "Anrufen" },
+  cta: {
+  "book": "Preise ansehen & anrufen",
+  "whatsapp": "WhatsApp",
+  "call": "Jetzt anrufen"
+},
   hero: {
-    badge: "Lizenziert & versichert · 24/7 in Wien",
-    title: "Ihr Taxi & Airport-Transfer in Wien",
-    subtitle: "Pünktlich, komfortabel und zu fairen Festpreisen. Buchen Sie in unter einer Minute — Bestätigung per WhatsApp oder E-Mail.",
-  },
+  "badge": "24/7 · Zell am See & Kaprun",
+  "title": "Alpina Taxi — Zell am See & Kaprun",
+  "subtitle": "Komfortable Transfers zu den Flughäfen Salzburg, Innsbruck und Wien. Auch für lokale Taxifahrten, Bahnhofstransfers und private Ausflüge sind wir rund um die Uhr für Sie da."
+},
   services: {
-    title: "Unsere Leistungen",
-    subtitle: "Vom schnellen Stadttransfer bis zur VIP-Fahrt — wir bringen Sie sicher ans Ziel.",
-    airport: { title: "Flughafen-Transfer", desc: "Zuverlässiger Transfer zum und vom Flughafen Wien (VIE). Flugüberwachung, Meet & Greet in der Ankunftshalle und Festpreise ohne Überraschungen." },
-    city: { title: "Stadt-Taxi", desc: "Schnell und sicher durch Wien — Tag und Nacht. Ob Termin, Dinner oder Heimfahrt: Wir sind rund um die Uhr für Sie da." },
-    vip: { title: "Business & VIP", desc: "Diskrete Chauffeursdienste für Geschäftskunden und besondere Anlässe. Premium-Fahrzeuge, professionelle Fahrer, absolute Verlässlichkeit." },
+  "title": "Unsere Leistungen",
+  "subtitle": "In Zell am See, Kaprun und der Region Salzburg — unterwegs ganz nach Ihren Wünschen.",
+  "airport": {
+    "title": "Flughafen- & Bahnhofstransfer",
+    "desc": "Zuverlässige Fahrten zu den Flughäfen Salzburg, Innsbruck und Wien sowie zu Bahnhöfen. Komfortable Transfers für einen entspannten Start und eine angenehme Rückkehr."
   },
+  "city": {
+    "title": "Taxi in Zell am See & Kaprun",
+    "desc": "Ob Termin, Restaurantbesuch oder Heimfahrt: Wir bringen Sie in Zell am See, Kaprun und Umgebung sicher ans Ziel — 24 Stunden am Tag."
+  },
+  "vip": {
+    "title": "Private Ausflüge & Business",
+    "desc": "Entdecken Sie die Region mit individuell geplanten Fahrten. Auch für Geschäftsreisen und besondere Anlässe bieten wir flexible, persönliche Transfers."
+  }
+},
   why: {
     title: "Warum mit uns fahren?",
     items: [
       { title: "Festpreise", desc: "Der Preis steht vor der Fahrt fest — kein Taxameter-Stress." },
       { title: "24/7 erreichbar", desc: "Tag und Nacht, auch an Feiertagen." },
-      { title: "Lizenziert & versichert", desc: "Offiziell konzessioniertes Wiener Unternehmen." },
-      { title: "Mehrsprachig", desc: "Wir sprechen Deutsch, Englisch, Türkisch und mehr." },
+      {"title": "Regional erfahren", "desc": "Ein erfahrenes Team, das Zell am See, Kaprun und die Region kennt."},
+      {"title": "Mehrsprachig", "desc": "Deutsch, Englisch, Türkisch, Französisch, Niederländisch und Arabisch."},
     ],
   },
   fleet: {
@@ -47,11 +61,11 @@ const de = {
   },
   float: { message: "Hallo! Ich interessiere mich für eine Fahrt." },
   about: {
-    title: "Über uns",
-    text: "Wir sind ein junges, lizenziertes Taxi- und Transferunternehmen aus Wien. Unser Ziel: der verlässlichste Fahrservice der Stadt — mit gepflegten Fahrzeugen, freundlichen Fahrern und ehrlichen Preisen. Ob Tourist, Geschäftsreisender oder Wiener:in — bei uns sitzen Sie gut.",
-    fleet: "Unsere Flotte",
-    fleetText: "Moderne Limousinen, Business-Vans und geräumige Fahrzeuge für Gruppen — alle klimatisiert, gepflegt und voll versichert.",
-  },
+  "title": "Über Alpina Taxi",
+  "text": "Alpina Taxi ist Ihr Fahrservice in Zell am See und Kaprun. Unser erfahrenes Team kennt die Region und ist rund um die Uhr für Sie da — vom lokalen Taxi über Flughafen- und Bahnhofstransfers bis zu privaten Ausflügen. Komfort, Sicherheit und Ihre Zufriedenheit begleiten jede Fahrt.",
+  "fleet": "Unsere Flotte",
+  "fleetText": "Komfortable Fahrzeuge für lokale Fahrten, Flughafentransfers und private Ausflüge — für Einzelreisende, Familien und Gruppen."
+},
   contact: {
     title: "Kontakt",
     subtitle: "Rufen Sie uns an, schreiben Sie per WhatsApp oder nutzen Sie das Formular — wir antworten schnell.",
@@ -92,26 +106,39 @@ export type Translations = typeof de;
 
 const en: Translations = {
   nav: { home: "Home", services: "Services", fleet: "Fleet", about: "About us", contact: "Contact" },
-  cta: { book: "Book now", whatsapp: "WhatsApp", call: "Call us" },
+  cta: {
+  "book": "View prices & call",
+  "whatsapp": "WhatsApp",
+  "call": "Call now"
+},
   hero: {
-    badge: "Licensed & insured · 24/7 in Vienna",
-    title: "Your taxi & airport transfer in Vienna",
-    subtitle: "Punctual, comfortable and at fair fixed prices. Book in under a minute — confirmation via WhatsApp or email.",
-  },
+  "badge": "24/7 · Zell am See & Kaprun",
+  "title": "Alpina Taxi — Zell am See & Kaprun",
+  "subtitle": "Comfortable transfers to Salzburg, Innsbruck and Vienna airports. We are also here around the clock for local taxi rides, train station transfers and private excursions."
+},
   services: {
-    title: "Our services",
-    subtitle: "From quick city rides to VIP transfers — we get you there safely.",
-    airport: { title: "Airport transfer", desc: "Reliable transfers to and from Vienna Airport (VIE). Flight tracking, meet & greet in arrivals, and fixed prices with no surprises." },
-    city: { title: "City taxi", desc: "Fast and safe across Vienna — day and night. Appointment, dinner or ride home: we're here for you around the clock." },
-    vip: { title: "Business & VIP", desc: "Discreet chauffeur services for business clients and special occasions. Premium vehicles, professional drivers, absolute reliability." },
+  "title": "Our services",
+  "subtitle": "Travel your way in Zell am See, Kaprun and the Salzburg region.",
+  "airport": {
+    "title": "Airport & train station transfers",
+    "desc": "Reliable rides to Salzburg, Innsbruck and Vienna airports and to train stations. Comfortable transfers for a relaxed departure and a pleasant return."
   },
+  "city": {
+    "title": "Zell am See & Kaprun taxi",
+    "desc": "Appointments, dining or a ride home: travel safely in Zell am See, Kaprun and the surrounding area, 24 hours a day."
+  },
+  "vip": {
+    "title": "Private excursions & business",
+    "desc": "Explore the region with personalised trips. Flexible, attentive transfers for business travel and special occasions, too."
+  }
+},
   why: {
     title: "Why ride with us?",
     items: [
       { title: "Fixed prices", desc: "The price is set before the ride — no meter stress." },
       { title: "Available 24/7", desc: "Day and night, including holidays." },
-      { title: "Licensed & insured", desc: "Officially licensed Viennese company." },
-      { title: "Multilingual", desc: "We speak German, English, Turkish and more." },
+      {"title": "Local experience", "desc": "An experienced team that knows Zell am See, Kaprun and the region."},
+      {"title": "Multilingual", "desc": "German, English, Turkish, French, Dutch and Arabic."},
     ],
   },
   fleet: {
@@ -127,11 +154,11 @@ const en: Translations = {
   },
   float: { message: "Hello! I'm interested in a ride." },
   about: {
-    title: "About us",
-    text: "We are a young, licensed taxi and transfer company from Vienna. Our goal: the most reliable ride service in the city — with well-kept vehicles, friendly drivers and honest prices. Tourist, business traveller or local — you're in good hands with us.",
-    fleet: "Our fleet",
-    fleetText: "Modern sedans, business vans and spacious group vehicles — all air-conditioned, well maintained and fully insured.",
-  },
+  "title": "About Alpina Taxi",
+  "text": "Alpina Taxi is your ride service in Zell am See and Kaprun. Our experienced team knows the region and is available around the clock — for local taxis, airport and train station transfers, and private excursions. Comfort, safety and your satisfaction are at the heart of every journey.",
+  "fleet": "Our fleet",
+  "fleetText": "Comfortable vehicles for local rides, airport transfers and private excursions — for solo travellers, families and groups."
+},
   contact: {
     title: "Contact",
     subtitle: "Call us, write via WhatsApp or use the form — we reply quickly.",
@@ -167,26 +194,39 @@ const en: Translations = {
 
 const tr: Translations = {
   nav: { home: "Ana sayfa", services: "Hizmetler", fleet: "Filomuz", about: "Hakkımızda", contact: "İletişim" },
-  cta: { book: "Hemen rezervasyon", whatsapp: "WhatsApp", call: "Ara" },
+  cta: {
+  "book": "Fiyatı gör ve ara",
+  "whatsapp": "WhatsApp",
+  "call": "Hemen ara"
+},
   hero: {
-    badge: "Lisanslı ve sigortalı · Viyana'da 7/24",
-    title: "Viyana'da taksi ve havaalanı transferiniz",
-    subtitle: "Dakik, konforlu ve uygun sabit fiyatlarla. Bir dakikadan kısa sürede rezervasyon yapın — onay WhatsApp veya e-posta ile.",
-  },
+  "badge": "7/24 · Zell am See & Kaprun",
+  "title": "Alpina Taxi — Zell am See & Kaprun",
+  "subtitle": "Salzburg, Innsbruck ve Wien havalimanlarına konforlu ve güvenilir transfer. Şehir içi taksi, tren istasyonu transferi ve özel geziler için de 7/24 yanınızdayız."
+},
   services: {
-    title: "Hizmetlerimiz",
-    subtitle: "Hızlı şehir içi yolculuklardan VIP transfere — sizi güvenle ulaştırıyoruz.",
-    airport: { title: "Havaalanı transferi", desc: "Viyana Havalimanı'na (VIE) güvenilir gidiş-dönüş transfer. Uçuş takibi, çıkış salonunda karşılama ve sürprizsiz sabit fiyatlar." },
-    city: { title: "Şehir içi taksi", desc: "Viyana'da gece gündüz hızlı ve güvenli ulaşım. Randevu, akşam yemeği veya eve dönüş — her zaman yanınızdayız." },
-    vip: { title: "Kurumsal & VIP", desc: "İş dünyası ve özel günler için şoförlü premium araç hizmeti. Profesyonel sürücüler, tam güvenilirlik." },
+  "title": "Hizmetlerimiz",
+  "subtitle": "Zell am See, Kaprun ve Salzburg bölgesinde ihtiyaçlarınıza uygun ulaşım.",
+  "airport": {
+    "title": "Havalimanı & tren istasyonu transferi",
+    "desc": "Salzburg, Innsbruck ve Wien havalimanlarına, ayrıca tren istasyonlarına güvenilir ulaşım. Seyahatinize rahat başlayın, dönüş yolculuğunuzu konforla tamamlayın."
   },
+  "city": {
+    "title": "Zell am See & Kaprun taksi",
+    "desc": "Randevunuz, akşam yemeğiniz veya eve dönüşünüz için Zell am See, Kaprun ve çevresinde güvenli ulaşım — günün her saati yanınızdayız."
+  },
+  "vip": {
+    "title": "Özel geziler & kurumsal ulaşım",
+    "desc": "Bölgeyi kişiye özel planlanan gezilerle keşfedin. İş seyahatleri ve özel günler için de esnek, özenli transfer hizmetleri sunuyoruz."
+  }
+},
   why: {
     title: "Neden biz?",
     items: [
       { title: "Sabit fiyat", desc: "Fiyat yolculuktan önce belli — taksimetre stresi yok." },
       { title: "7/24 ulaşılabilir", desc: "Gece gündüz, resmi tatillerde dahil." },
-      { title: "Lisanslı ve sigortalı", desc: "Resmi lisanslı Viyana şirketi." },
-      { title: "Çok dilli", desc: "Almanca, İngilizce, Türkçe ve daha fazlası." },
+      {"title": "Bölgesel deneyim", "desc": "Zell am See, Kaprun ve çevresini yakından tanıyan deneyimli ekip."},
+      {"title": "Çok dilli", "desc": "Almanca, İngilizce, Türkçe, Fransızca, Hollandaca ve Arapça."},
     ],
   },
   fleet: {
@@ -202,11 +242,11 @@ const tr: Translations = {
   },
   float: { message: "Merhaba! Bir yolculuk hakkında bilgi almak istiyorum." },
   about: {
-    title: "Hakkımızda",
-    text: "Viyana'dan genç, lisanslı bir taksi ve transfer şirketiyiz. Hedefimiz: bakımlı araçlar, güler yüzlü sürücüler ve dürüst fiyatlarla şehrin en güvenilir ulaşım hizmeti olmak. Turist, iş insanı veya Viyanalı — bizimle güvendesiniz.",
-    fleet: "Filomuz",
-    fleetText: "Modern sedanlar, business vanlar ve gruplar için geniş araçlar — hepsi klimalı, bakımlı ve tam sigortalı.",
-  },
+  "title": "Alpina Taxi hakkında",
+  "text": "Alpina Taxi, Zell am See ve Kaprun’da ulaşım için yanınızda. Bölgeyi yakından tanıyan deneyimli ekibimizle şehir içi taksi, havalimanı ve tren istasyonu transferleri, özel geziler için 7/24 hizmet sunuyoruz. Her yolculukta konforunuzu, güvenliğinizi ve memnuniyetinizi ön planda tutuyoruz.",
+  "fleet": "Filomuz",
+  "fleetText": "Şehir içi yolculuklar, havalimanı transferleri ve özel geziler için konforlu araçlar — bireysel yolcular, aileler ve gruplar için."
+},
   contact: {
     title: "İletişim",
     subtitle: "Bizi arayın, WhatsApp'tan yazın veya formu kullanın — hızlı dönüş yapıyoruz.",
@@ -242,26 +282,39 @@ const tr: Translations = {
 
 const fr: Translations = {
   nav: { home: "Accueil", services: "Services", fleet: "Flotte", about: "À propos", contact: "Contact" },
-  cta: { book: "Réserver", whatsapp: "WhatsApp", call: "Appeler" },
+  cta: {
+  "book": "Voir les tarifs et appeler",
+  "whatsapp": "WhatsApp",
+  "call": "Appeler maintenant"
+},
   hero: {
-    badge: "Licencié & assuré · 24/7 à Vienne",
-    title: "Votre taxi & transfert aéroport à Vienne",
-    subtitle: "Ponctuel, confortable et à prix fixes équitables. Réservez en moins d'une minute — confirmation par WhatsApp ou e-mail.",
-  },
+  "badge": "24h/24 · Zell am See & Kaprun",
+  "title": "Alpina Taxi — Zell am See & Kaprun",
+  "subtitle": "Des transferts confortables vers les aéroports de Salzbourg, Innsbruck et Vienne. Également à votre service 24h/24 pour vos trajets locaux, transferts en gare et excursions privées."
+},
   services: {
-    title: "Nos services",
-    subtitle: "Du trajet rapide en ville au transfert VIP — nous vous conduisons en toute sécurité.",
-    airport: { title: "Transfert aéroport", desc: "Transferts fiables vers et depuis l'aéroport de Vienne (VIE). Suivi de vol, accueil aux arrivées et prix fixes sans surprises." },
-    city: { title: "Taxi en ville", desc: "Rapide et sûr dans toute Vienne — jour et nuit. Rendez-vous, dîner ou retour à la maison : nous sommes là 24h/24." },
-    vip: { title: "Affaires & VIP", desc: "Services de chauffeur discrets pour clients d'affaires et occasions spéciales. Véhicules premium, chauffeurs professionnels." },
+  "title": "Nos services",
+  "subtitle": "Des déplacements à votre mesure à Zell am See, Kaprun et dans la région de Salzbourg.",
+  "airport": {
+    "title": "Transferts aéroport & gare",
+    "desc": "Trajets fiables vers les aéroports de Salzbourg, Innsbruck et Vienne, ainsi que les gares. Voyagez confortablement, au départ comme au retour."
   },
+  "city": {
+    "title": "Taxi à Zell am See & Kaprun",
+    "desc": "Rendez-vous, restaurant ou retour à la maison : des trajets sûrs à Zell am See, Kaprun et dans les environs, 24h/24."
+  },
+  "vip": {
+    "title": "Excursions privées & affaires",
+    "desc": "Découvrez la région avec des trajets sur mesure. Des transferts flexibles et attentionnés également pour vos voyages professionnels et occasions spéciales."
+  }
+},
   why: {
     title: "Pourquoi nous ?",
     items: [
       { title: "Prix fixes", desc: "Le prix est fixé avant la course — pas de stress de compteur." },
       { title: "Disponible 24/7", desc: "Jour et nuit, jours fériés compris." },
-      { title: "Licencié & assuré", desc: "Entreprise viennoise officiellement licenciée." },
-      { title: "Multilingue", desc: "Nous parlons allemand, anglais, turc et plus." },
+      {"title": "Expérience locale", "desc": "Une équipe expérimentée qui connaît Zell am See, Kaprun et la région."},
+      {"title": "Multilingue", "desc": "Allemand, anglais, turc, français, néerlandais et arabe."},
     ],
   },
   fleet: {
@@ -277,11 +330,11 @@ const fr: Translations = {
   },
   float: { message: "Bonjour ! Je suis intéressé(e) par une course." },
   about: {
-    title: "À propos",
-    text: "Nous sommes une jeune entreprise de taxi et de transfert licenciée à Vienne. Notre objectif : le service le plus fiable de la ville — véhicules soignés, chauffeurs aimables et prix honnêtes. Touriste, voyageur d'affaires ou Viennois — vous êtes entre bonnes mains.",
-    fleet: "Notre flotte",
-    fleetText: "Berlines modernes, vans business et véhicules spacieux pour groupes — tous climatisés, entretenus et entièrement assurés.",
-  },
+  "title": "À propos d’Alpina Taxi",
+  "text": "Alpina Taxi vous accompagne à Zell am See et Kaprun. Notre équipe expérimentée connaît la région et vous accueille 24h/24 pour les trajets locaux, les transferts aéroport et gare et les excursions privées. Votre confort, votre sécurité et votre satisfaction sont au cœur de chaque voyage.",
+  "fleet": "Notre flotte",
+  "fleetText": "Des véhicules confortables pour les trajets locaux, transferts aéroport et excursions privées — en solo, en famille ou en groupe."
+},
   contact: {
     title: "Contact",
     subtitle: "Appelez-nous, écrivez sur WhatsApp ou utilisez le formulaire — nous répondons vite.",
@@ -317,26 +370,39 @@ const fr: Translations = {
 
 const nl: Translations = {
   nav: { home: "Home", services: "Diensten", fleet: "Wagenpark", about: "Over ons", contact: "Contact" },
-  cta: { book: "Nu boeken", whatsapp: "WhatsApp", call: "Bellen" },
+  cta: {
+  "book": "Bekijk prijzen en bel",
+  "whatsapp": "WhatsApp",
+  "call": "Bel nu"
+},
   hero: {
-    badge: "Gelicentieerd & verzekerd · 24/7 in Wenen",
-    title: "Uw taxi & luchthaventransfer in Wenen",
-    subtitle: "Stipt, comfortabel en tegen eerlijke vaste prijzen. Boek binnen een minuut — bevestiging via WhatsApp of e-mail.",
-  },
+  "badge": "24/7 · Zell am See & Kaprun",
+  "title": "Alpina Taxi — Zell am See & Kaprun",
+  "subtitle": "Comfortabele transfers naar de luchthavens van Salzburg, Innsbruck en Wenen. Ook voor lokale taxiritten, stationstransfers en privé-uitstapjes staan wij dag en nacht klaar."
+},
   services: {
-    title: "Onze diensten",
-    subtitle: "Van snelle stadsritten tot VIP-transfers — wij brengen u veilig op bestemming.",
-    airport: { title: "Luchthaventransfer", desc: "Betrouwbare transfers van en naar luchthaven Wenen (VIE). Vluchttracking, meet & greet bij aankomst en vaste prijzen zonder verrassingen." },
-    city: { title: "Stadstaxi", desc: "Snel en veilig door Wenen — dag en nacht. Afspraak, diner of rit naar huis: wij zijn er 24/7 voor u." },
-    vip: { title: "Zakelijk & VIP", desc: "Discrete chauffeursdiensten voor zakelijke klanten en speciale gelegenheden. Premium voertuigen, professionele chauffeurs." },
+  "title": "Onze diensten",
+  "subtitle": "Vervoer op maat in Zell am See, Kaprun en de regio Salzburg.",
+  "airport": {
+    "title": "Luchthaven- & stationstransfers",
+    "desc": "Betrouwbare ritten naar de luchthavens van Salzburg, Innsbruck en Wenen en naar treinstations. Comfortabel reizen voor een ontspannen vertrek en terugkeer."
   },
+  "city": {
+    "title": "Taxi in Zell am See & Kaprun",
+    "desc": "Een afspraak, diner of rit naar huis: veilig vervoer in Zell am See, Kaprun en omgeving, 24 uur per dag."
+  },
+  "vip": {
+    "title": "Privé-uitstapjes & zakelijk",
+    "desc": "Ontdek de regio met ritten op maat. Ook voor zakenreizen en bijzondere gelegenheden bieden wij flexibel en persoonlijk vervoer."
+  }
+},
   why: {
     title: "Waarom met ons rijden?",
     items: [
       { title: "Vaste prijzen", desc: "De prijs staat vooraf vast — geen meterstress." },
       { title: "24/7 bereikbaar", desc: "Dag en nacht, ook op feestdagen." },
-      { title: "Gelicentieerd & verzekerd", desc: "Officieel erkend Weens bedrijf." },
-      { title: "Meertalig", desc: "Wij spreken Duits, Engels, Turks en meer." },
+      {"title": "Lokale ervaring", "desc": "Een ervaren team dat Zell am See, Kaprun en de regio goed kent."},
+      {"title": "Meertalig", "desc": "Duits, Engels, Turks, Frans, Nederlands en Arabisch."},
     ],
   },
   fleet: {
@@ -352,11 +418,11 @@ const nl: Translations = {
   },
   float: { message: "Hallo! Ik ben geïnteresseerd in een rit." },
   about: {
-    title: "Over ons",
-    text: "Wij zijn een jong, gelicentieerd taxi- en transferbedrijf uit Wenen. Ons doel: de betrouwbaarste ritservice van de stad — met verzorgde voertuigen, vriendelijke chauffeurs en eerlijke prijzen. Toerist, zakenreiziger of Weener — bij ons zit u goed.",
-    fleet: "Ons wagenpark",
-    fleetText: "Moderne sedans, business vans en ruime groepsvoertuigen — allemaal geairconditioneerd, goed onderhouden en volledig verzekerd.",
-  },
+  "title": "Over Alpina Taxi",
+  "text": "Alpina Taxi is uw vervoersdienst in Zell am See en Kaprun. Ons ervaren team kent de regio en staat dag en nacht klaar voor lokale ritten, luchthaven- en stationstransfers en privé-uitstapjes. Uw comfort, veiligheid en tevredenheid staan bij iedere reis centraal.",
+  "fleet": "Ons wagenpark",
+  "fleetText": "Comfortabele voertuigen voor lokale ritten, luchthaventransfers en privé-uitstapjes — voor individuele reizigers, gezinnen en groepen."
+},
   contact: {
     title: "Contact",
     subtitle: "Bel ons, schrijf via WhatsApp of gebruik het formulier — wij reageren snel.",
@@ -390,7 +456,130 @@ const nl: Translations = {
   footer: { rights: "Alle rechten voorbehouden.", quick: "Snelle links" },
 };
 
-const translations: Record<Lang, Translations> = { de, en, tr, fr, nl };
+const ar: Translations = {
+  "nav": {
+    "home": "الرئيسية",
+    "services": "خدماتنا",
+    "fleet": "أسطولنا",
+    "about": "من نحن",
+    "contact": "اتصل بنا"
+  },
+  "cta": {
+    "book": "عرض الأسعار والاتصال",
+    "whatsapp": "واتساب",
+    "call": "اتصل الآن"
+  },
+  "hero": {
+    "badge": "على مدار الساعة · زيل أم سي وكابرون",
+    "title": "ألبينا تاكسي — زيل أم سي وكابرون",
+    "subtitle": "تنقلات مريحة وموثوقة إلى مطارات سالزبورغ وإنسبروك وفيينا. نحن أيضًا في خدمتكم على مدار الساعة للرحلات المحلية والتنقل إلى محطات القطار والجولات الخاصة."
+  },
+  "services": {
+    "title": "خدماتنا",
+    "subtitle": "خدمات نقل تناسب احتياجاتكم في زيل أم سي وكابرون ومنطقة سالزبورغ.",
+    "airport": {
+      "title": "النقل إلى المطارات ومحطات القطار",
+      "desc": "رحلات موثوقة إلى مطارات سالزبورغ وإنسبروك وفيينا ومحطات القطار. ابدأوا رحلتكم براحة واستمتعوا بعودة مريحة."
+    },
+    "city": {
+      "title": "تاكسي في زيل أم سي وكابرون",
+      "desc": "للمواعيد أو المطاعم أو العودة إلى المنزل: تنقل آمن في زيل أم سي وكابرون والمناطق المحيطة على مدار الساعة."
+    },
+    "vip": {
+      "title": "جولات خاصة ورحلات أعمال",
+      "desc": "اكتشفوا المنطقة برحلات مصممة خصيصًا لكم، مع خدمات نقل مرنة وعناية شخصية لرحلات الأعمال والمناسبات الخاصة."
+    }
+  },
+  "why": {
+    "title": "لماذا تختاروننا؟",
+    "items": [
+      {
+        "title": "أسعار ثابتة",
+        "desc": "السعر معروف قبل الرحلة دون مفاجآت."
+      },
+      {
+        "title": "متاحون على مدار الساعة",
+        "desc": "ليلًا ونهارًا، بما في ذلك أيام العطل."
+      },
+      {
+        "title": "خبرة محلية",
+        "desc": "فريق ذو خبرة يعرف زيل أم سي وكابرون والمنطقة جيدًا."
+      },
+      {
+        "title": "متعدد اللغات",
+        "desc": "الألمانية والإنجليزية والتركية والفرنسية والهولندية والعربية."
+      }
+    ]
+  },
+  "fleet": {
+    "title": "أسطولنا",
+    "subtitle": "مركبات حديثة ومكيفة للرحلات الفردية والعائلية والجماعية.",
+    "seats": "ركاب",
+    "vehicles": [
+      {
+        "name": "سيارة سيدان",
+        "capacity": "حتى 4 ركاب",
+        "desc": "سيارة مريحة للرحلات المحلية والتنقل إلى المطارات، مع تكييف ومساحة للأمتعة."
+      },
+      {
+        "name": "فان للأعمال",
+        "capacity": "حتى 6 ركاب",
+        "desc": "فان مريح لرحلات الأعمال والمجموعات الصغيرة مع سائق محترف."
+      },
+      {
+        "name": "مركبة للمجموعات",
+        "capacity": "حتى 8 ركاب",
+        "desc": "مركبة واسعة للعائلات والمجموعات والأمتعة، مناسبة للرحلات ونقل المطار."
+      }
+    ],
+    "note": "هل تحتاجون إلى مقاعد للأطفال أو لديكم طلبات خاصة؟ راسلونا عبر واتساب."
+  },
+  "float": {
+    "message": "مرحبًا! أود الاستفسار عن رحلة مع ألبينا تاكسي."
+  },
+  "about": {
+    "title": "عن ألبينا تاكسي",
+    "text": "ألبينا تاكسي هي خدمة النقل الخاصة بكم في زيل أم سي وكابرون. فريقنا ذو الخبرة يعرف المنطقة ويخدمكم على مدار الساعة للرحلات المحلية والتنقل إلى المطارات ومحطات القطار والجولات الخاصة. راحتكم وسلامتكم ورضاكم هي أولويتنا في كل رحلة.",
+    "fleet": "أسطولنا",
+    "fleetText": "مركبات مريحة للرحلات المحلية والتنقل إلى المطارات والجولات الخاصة، للأفراد والعائلات والمجموعات."
+  },
+  "contact": {
+    "title": "اتصل بنا",
+    "subtitle": "اتصلوا بنا أو راسلونا عبر واتساب أو النموذج، وسنرد عليكم في أقرب وقت.",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "hours": "أوقات الخدمة",
+    "hoursValue": "24 ساعة يوميًا، 7 أيام في الأسبوع"
+  },
+  "form": {
+    "title": "طلب رحلة",
+    "name": "الاسم",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "pickup": "عنوان الانطلاق",
+    "dropoff": "عنوان الوجهة",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "passengers": "عدد الركاب",
+    "vehicle": "المركبة",
+    "vehicleStandard": "سيارة سيدان",
+    "vehicleBusiness": "فان للأعمال",
+    "vehicleGroup": "مركبة للمجموعات (حتى 8)",
+    "notes": "ملاحظات (اختياري)",
+    "submitWhatsapp": "طلب عبر واتساب",
+    "submitEmail": "طلب عبر البريد الإلكتروني",
+    "success": "طلبكم جاهز، ويتم فتحه في واتساب أو تطبيق البريد الإلكتروني.",
+    "required": "حقل مطلوب",
+    "invalidEmail": "بريد إلكتروني غير صالح",
+    "msgIntro": "طلب حجز جديد"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة.",
+    "quick": "روابط سريعة"
+  }
+};
+
+const translations: Record<Lang, Translations> = { de, en, tr, fr, nl, ar };
 
 const LangContext = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: Translations }>({
   lang: "de",
@@ -407,6 +596,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     const saved = window.localStorage.getItem(STORAGE_KEY) as Lang | null;
     if (saved && translations[saved]) setLangState(saved);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  }, [lang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);

@@ -1,18 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/i18n";
-import fleetImg from "@/assets/fleet-chauffeur.jpg";
+import fleetImg from "@/assets/hero-alpina.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Über uns — Vienna Transfer" },
+      { title: "Über uns — Alpina Taxi" },
       {
         name: "description",
         content:
-          "Lizenziertes Taxi- und Transferunternehmen aus Wien: gepflegte Fahrzeuge, freundliche Fahrer, ehrliche Festpreise — 24/7.",
+          "Lizenziertes Taxi- und Transferunternehmen aus Zell am See & Kaprun: gepflegte Fahrzeuge, freundliche Fahrer, ehrliche Festpreise — 24/7.",
       },
-      { property: "og:title", content: "Über uns — Vienna Transfer" },
-      { property: "og:description", content: "Lizenziertes Taxi- und Transferunternehmen aus Wien." },
+      { property: "og:title", content: "Über uns — Alpina Taxi" },
+      { property: "og:description", content: "Lizenziertes Taxi- und Transferunternehmen aus Zell am See & Kaprun." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -43,7 +43,7 @@ function AboutPage() {
         <div>
           <img
             src={fleetImg}
-            alt="Chauffeur at Vienna Airport"
+            alt="Alpina Taxi · Zell am See & Kaprun"
             width={1376}
             height={768}
             loading="lazy"

@@ -3,21 +3,23 @@ import { useLanguage } from "@/lib/i18n";
 import { COMPANY } from "@/lib/config";
 import { BookingForm } from "@/components/BookingForm";
 import { IconPlane, IconTaxi, IconStar, IconPhone, IconChat, IconCheck } from "@/components/icons";
-import heroImg from "@/assets/hero-vienna.jpg";
+import heroImg from "@/assets/hero-alpina.jpg";
+import { alpinaContent } from "@/lib/alpina-content";
+import { PriceButton } from "@/components/PricingDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vienna Transfer — Taxi & Airport Transfer in Wien" },
+      { title: "Alpina Taxi — Taxi & Airport Transfer in Zell am See & Kaprun" },
       {
         name: "description",
         content:
-          "Ihr lizenzierter Taxi- und Flughafentransfer in Wien. Festpreise, 24/7, mehrsprachig. Jetzt per WhatsApp oder E-Mail buchen.",
+          "Alpina Taxi in Zell am See & Kaprun: Flughafentransfers nach Salzburg, Innsbruck und Wien, Taxi, Bahnhofstransfers und private Ausflüge — 24/7.",
       },
-      { property: "og:title", content: "Vienna Transfer — Taxi & Airport Transfer in Wien" },
+      { property: "og:title", content: "Alpina Taxi — Taxi & Airport Transfer in Zell am See & Kaprun" },
       {
         property: "og:description",
-        content: "Festpreise, 24/7 erreichbar, mehrsprachig. Taxi & Flughafentransfer in Wien.",
+        content: "Festpreise, 24/7 erreichbar, mehrsprachig. Taxi & Flughafentransfer in Zell am See & Kaprun.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -27,7 +29,8 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const welcome = alpinaContent[lang].welcome;
 
   const serviceCards = [
     { ...t.services.airport, icon: <IconPlane /> },
@@ -41,13 +44,13 @@ function HomePage() {
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <img
           src={heroImg}
-          alt="Taxi in Vienna"
+          alt="Alpina Taxi · Zell am See & Kaprun"
           width={1920}
           height={1024}
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30" />
-        <div className="relative mx-auto max-w-6xl px-4 py-24 md:py-36">
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/60 to-ink/10" />
+        <div className="relative mx-auto max-w-6xl px-4 py-14 md:py-20">
           <p className="inline-flex items-center gap-2 rounded-full border border-ink-foreground/20 bg-ink-foreground/10 px-4 py-1.5 text-xs font-medium backdrop-blur">
             <span className="h-2 w-2 rounded-full bg-primary" />
             {t.hero.badge}
@@ -57,12 +60,7 @@ function HomePage() {
           </h1>
           <p className="mt-5 max-w-xl text-base text-ink-foreground/80 md:text-lg">{t.hero.subtitle}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#booking"
-              className="rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition-colors hover:bg-primary/90"
-            >
-              {t.cta.book}
-            </a>
+            <PriceButton className="h-auto min-h-12 whitespace-normal rounded-full px-7 py-3.5 text-sm font-semibold" />
             <a
               href={`https://wa.me/${COMPANY.whatsapp}`}
               target="_blank"
@@ -72,6 +70,16 @@ function HomePage() {
               WhatsApp
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+          <h2 className="max-w-4xl font-heading text-2xl font-bold leading-snug md:text-3xl">{welcome.title}</h2>
+          <div className="mt-6 max-w-4xl space-y-4 text-base leading-relaxed text-muted-foreground">
+            {welcome.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
+          <p className="mt-6 font-medium text-primary">{welcome.closing}</p>
         </div>
       </section>
 
@@ -139,7 +147,7 @@ function HomePage() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366]/15 text-[#1da851]"><IconChat /></span>
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-whatsapp/15 text-whatsapp"><IconChat /></span>
                 <span>
                   <span className="block text-xs text-muted-foreground">WhatsApp</span>
                   <span className="font-heading text-lg font-bold">{COMPANY.phone}</span>
